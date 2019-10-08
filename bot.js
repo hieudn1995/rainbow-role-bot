@@ -23,7 +23,7 @@ client.on('guildCreate', (guild) => {
 });
 client.on('message', (message) => {
     if (message.channel.type !== 'text') return;
-    if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('Bot Runner') || message.member.id === message.guild.owner.id) {
+    if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') || message.member.id === message.guild.owner.id) {
         if (message.content === '::stop') {stop.push(message.guild.id); return message.channel.send('Stop');}
         if (message.content === '::start') {stop.splice(stop.indexOf(message.guild.id),1); return message.channel.send('Play');}
     }
