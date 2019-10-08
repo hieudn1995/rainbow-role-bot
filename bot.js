@@ -7,7 +7,7 @@ async function color () {
     forEachTimeout(colors, (color) => {
         client.guilds.forEach((guild) => {
                 if (!stop.includes(guild.id)) {
-                let role = guild.roles.find('name', 'rainbow');
+                let role = guild.roles.find('name', 'test');
                 if (role && role.editable) 
                     role.setColor(color);
             }  
