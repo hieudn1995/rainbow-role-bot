@@ -12,7 +12,7 @@ async function color () {
                     role.setColor(color);
             }  
         })
-    }, 1000).then(color);
+    }, 500).then(color);
 }
 client.on('ready', () => {
     color();
