@@ -7,7 +7,7 @@ async function color () {
     forEachTimeout(colors, (color) => {
         client.guilds.forEach((guild) => {
                 if (!stop.includes(guild.id)) {
-                let role = guild.roles.find('name', 'Bot Hỗ Trợ Game');
+                let role = guild.roles.find('name', '👑Mod👑');
                 if (role && role.editable) 
                     role.setColor(color);
             }  
